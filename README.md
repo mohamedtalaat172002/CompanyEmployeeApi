@@ -31,4 +31,4 @@ This project follows the Onion Architecture pattern, which organizes the codebas
  
 - **AutoMapper**: Utilizes AutoMapper library for object-to-object mapping, simplifying the mapping between domain models and DTOs.
 ## Contact Information
-For questions,contact [Mohamed Talaat](mohamedtalaat172002@gmail.com).
+For questions,contact [Mohamed Talaat](mailto:mohamedtalaat172002@gmail.com).
