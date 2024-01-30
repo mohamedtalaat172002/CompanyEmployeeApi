@@ -1,0 +1,17 @@
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\CompanyEmployeePresentation.deps.json
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\CompanyEmployeePresentation.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\CompanyEmployeePresentation.pdb
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\ServiceContracts.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\ServiceContracts.pdb
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.csproj.AssemblyReference.cache
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.AssemblyInfoInputs.cache
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.AssemblyInfo.cs
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.csproj.CoreCompileInputs.cache
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.csproj.CopyComplete
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\refint\CompanyEmployeePresentation.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.pdb
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\ref\CompanyEmployeePresentation.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\Shared.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\Shared.pdb
