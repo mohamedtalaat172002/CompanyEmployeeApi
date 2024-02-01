@@ -21,7 +21,7 @@ This project follows the Onion Architecture pattern, which organizes the codebas
 - **Presentation Layer**: Includes the user interface components, such as controllers, views, and API endpoints. This layer interacts with users and external systems, handling input and output.
 
 - **Infrastructure Layer**: Provides implementations for external dependencies and infrastructure concerns, such as data access, logging, and external services integration. It includes database access, repository implementations, external API clients, and other infrastructure-related components.
-### Features-till now-:
+### implemented-till now-:
 
 - **Logger**: Implements logging functionality to trace application events and errors, aiding in debugging and monitoring.
   
@@ -30,5 +30,10 @@ This project follows the Onion Architecture pattern, which organizes the codebas
 - **DTO Classes**: Defines Data Transfer Object (DTO) classes to transfer data between layers and external systems, ensuring data encapsulation and reducing coupling.
  
 - **AutoMapper**: Utilizes AutoMapper library for object-to-object mapping, simplifying the mapping between domain models and DTOs.
+
+- **Global Error Handling**: Manages application-wide error handling.
+
+- **Invalid Request Handling**: Manages and responds to invalid requests effectively, handling the exception in a better way than throwing try and catch everywhere in the project.
+
 ## Contact Information
-For questions,contact [Mohamed Talaat](mailto:mohamedtalaat172002@gmail.com).
+For questions, mail [Mohamed Talaat](mailto:mohamedtalaat172002@gmail.com).
