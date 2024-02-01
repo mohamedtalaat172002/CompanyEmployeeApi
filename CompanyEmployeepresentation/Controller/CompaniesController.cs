@@ -18,18 +18,17 @@ namespace CompanyEmployeePresentation.Controller
         [HttpGet]
         public IActionResult GetAllCompanies()
         {
-            try
-            {
+         
            var companies= _service.companyService.GetCompanies(Trackchanges:false);
-                return Ok(companies);
-
-            }
-            catch(Exception ex) 
-            {
-
-                return StatusCode(500, $"A7A ht3ml 2ehh? dah internal Server Error{ex}");
-            }
+                return Ok(companies);    
         }
+
+        [HttpGet("{id:guid}")]
+        public IActionResult GetCompany(Guid id)
+        {
+            var Company = _service.companyService.GetCompany(id,TrackChanges:false);
+            return Ok(Company);
+        } 
 
     }
 }

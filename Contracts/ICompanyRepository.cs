@@ -11,5 +11,6 @@ namespace Contracts
     public interface ICompanyRepository
     {
         IEnumerable<Company> GetCompanies(bool Trackchanges);
+        public Company GetCompany(Guid id,bool TrackCahnges);
     }
 }

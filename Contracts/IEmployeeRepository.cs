@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace Contracts
 {
     public interface IEmployeeRepository
     {
+        public IEnumerable<Employee> GetEmployees(Guid companyid,bool TrackChanges);
+        public Employee GetEmployee(Guid Companyid,Guid employeeid,bool TrackChanges);
     }
 }

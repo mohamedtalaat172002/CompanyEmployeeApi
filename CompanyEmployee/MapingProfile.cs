@@ -9,7 +9,7 @@ namespace CompanyEmployee
         public MapingProfile()
         {
             CreateMap<Company, CompanyDto>();
-            
+            CreateMap<Employee, EmployeeDto>();
         }
        
     }

@@ -18,19 +18,18 @@ builder.Services.ConfigureServiceManger();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program));
 
+
+
+
 var app = builder.Build();
 
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(),
      "/Logs/nlog.config"));
 
-
-
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-  {
-    app.UseDeveloperExceptionPage();
-  }
-else
+var logger= app.Services.GetRequiredService<ILoggerManager>();
+app.ConfigureExceptionHandler(logger);
+if (app.Environment.IsProduction())
     app.UseHsts();
 
 

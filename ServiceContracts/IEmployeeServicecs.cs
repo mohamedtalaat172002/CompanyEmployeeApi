@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.DataTranfere;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace ServiceContracts
 {
     public interface IEmployeeServicecs
     {
+        public IEnumerable<EmployeeDto> GetEmployees(Guid Companyid, bool TrackChanges);
+        public EmployeeDto GetEmployee(Guid Companyid, Guid Employeeid, bool TrackChanges);
     }
 }
