@@ -24,10 +24,6 @@ namespace Service
                EmployeeService(repositoryManger, loggerManager,mapper));
         }
 
-
-
-
-
         public IcompanyService companyService => _companyService.Value;
 
         public IEmployeeServicecs employeeService => _employeeServicecs.Value;

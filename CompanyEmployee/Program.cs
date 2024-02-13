@@ -2,13 +2,16 @@ using AutoMapper;
 using CompanyEmployee.Extentions;
 using Contracts;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Mvc;
 using NLog;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+options.SuppressModelStateInvalidFilter = true
+);
 
-builder.Services.AddControllers().
-    AddApplicationPart(typeof(CompanyEmployeePresentation.
+builder.Services.AddControllers().AddApplicationPart(typeof(CompanyEmployeePresentation.
     AssemplyReference).Assembly);
 builder.Services.ConfiguerCors();
 builder.Services.ConfigurIISIntegration();
