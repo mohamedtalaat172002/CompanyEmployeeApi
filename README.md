@@ -35,5 +35,11 @@ This project follows the Onion Architecture pattern, which organizes the codebas
 
 - **Invalid Request Handling**: Manages and responds to invalid requests effectively, handling the exception in a better way than throwing try and catch everywhere in the project.
 
+-  **CRUD Operations**: Enables Create, Read, Update, and Delete operations for efficient management of employee data.
+   
+   Collection of Companies: Users can add a collection of companies in one request
+   
+   Company with Employees: Allows the creation of a company entity with its associated employees in a single request, reducing the number of API calls required.
+
 ## Contact Information
 For questions, mail [Mohamed Talaat](mailto:mohamedtalaat172002@gmail.com).
