@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Entities.Model;
+using Microsoft.EntityFrameworkCore;
 using Shared.DataTranfere;
 using System;
 using System.Collections.Generic;
@@ -12,23 +13,22 @@ namespace Repository
     public class ComapnyReopsitory:RepositoryBase<Company>,ICompanyRepository
     {
         public ComapnyReopsitory(ApplicationDbContext applicationDbContext):base(applicationDbContext)
-        {
-            
+        {  
+
         }
 
-        public IEnumerable<Company> GetCompanies(bool Trackchanges)
-        =>FindAll(Trackchanges).OrderBy(o=>o.Name).ToList();
+        public async Task<IEnumerable<Company>> GetAllCompaniesAsync(bool trackChanges) =>
+        await FindAll(trackChanges).OrderBy(c => c.Name).ToListAsync();
 
-        public Company GetCompany(Guid id, bool TrackCahnges)
-        => FindByCondition(x => x.Id.Equals(id), TrackCahnges).SingleOrDefault();
-      
-        public void CreateCompany(Company company)=>
-          Create(company);
+        public async Task<Company> GetCompanyAsync(Guid companyId, bool trackChanges) =>
+        await FindByCondition(c => c.Id.Equals(companyId), trackChanges).SingleOrDefaultAsync();
 
-        public IEnumerable<Company> GetByIds(IEnumerable<Guid> Ids, bool TrackChanges)
-          =>  FindByCondition(x => Ids.Contains(x.Id), TrackChanges).ToList();
+        public void CreateCompany(Company company) => Create(company);
 
-        public void DeleteCompnay(Company company)
-        => Delete(company); 
+        public async Task<IEnumerable<Company>> GetByIdsAsync(IEnumerable<Guid> ids, bool TrackChanges) =>
+        await FindByCondition(x => ids.Contains(x.Id), TrackChanges).ToListAsync();
+
+        public void DeleteCompnay(Company company) => Delete(company);
+
     }
 }

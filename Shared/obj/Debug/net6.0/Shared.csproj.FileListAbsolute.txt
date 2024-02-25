@@ -9,3 +9,8 @@ C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\obj\Debug\net6.0
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\obj\Debug\net6.0\refint\Shared.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\obj\Debug\net6.0\Shared.pdb
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\obj\Debug\net6.0\ref\Shared.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\obj\Debug\net6.0\Shared.sourcelink.json
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\bin\Debug\net6.0\Entities.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\bin\Debug\net6.0\Entities.pdb
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\obj\Debug\net6.0\Shared.csproj.AssemblyReference.cache
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Shared\obj\Debug\net6.0\Shared.csproj.CopyComplete

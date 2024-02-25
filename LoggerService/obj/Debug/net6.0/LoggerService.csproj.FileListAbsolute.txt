@@ -20,3 +20,4 @@ C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\LoggerService\bin\Debug
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\LoggerService\bin\Debug\net6.0\Entities.pdb
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\LoggerService\bin\Debug\net6.0\Shared.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\LoggerService\bin\Debug\net6.0\Shared.pdb
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\LoggerService\obj\Debug\net6.0\LoggerService.sourcelink.json

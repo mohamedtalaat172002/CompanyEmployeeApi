@@ -8,13 +8,22 @@
     ".NETCoreApp,Version=v6.0": {
       "ServiceContracts/1.0.0": {
         "dependencies": {
+          "Entities": "1.0.0",
           "Shared": "1.0.0"
         },
         "runtime": {
           "ServiceContracts.dll": {}
         }
       },
+      "Entities/1.0.0": {
+        "runtime": {
+          "Entities.dll": {}
+        }
+      },
       "Shared/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
         "runtime": {
           "Shared.dll": {}
         }
@@ -23,6 +32,11 @@
   },
   "libraries": {
     "ServiceContracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

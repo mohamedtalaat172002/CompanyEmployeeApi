@@ -15,3 +15,6 @@ C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresenta
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\ref\CompanyEmployeePresentation.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\Shared.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\Shared.pdb
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\obj\Debug\net6.0\CompanyEmployeePresentation.sourcelink.json
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\Entities.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployeepresentation\bin\Debug\net6.0\Entities.pdb

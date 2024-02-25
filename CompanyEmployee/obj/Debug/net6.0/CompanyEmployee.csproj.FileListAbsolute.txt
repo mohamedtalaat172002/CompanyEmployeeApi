@@ -89,3 +89,7 @@ C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\bin\Deb
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\bin\Debug\net6.0\Shared.pdb
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\obj\Debug\net6.0\CompanyEmployee.sourcelink.json
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\CompanyEmployee\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

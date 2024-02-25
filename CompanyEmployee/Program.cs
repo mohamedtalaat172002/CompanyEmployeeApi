@@ -4,6 +4,10 @@ using Contracts;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.Extensions.Options;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,7 +15,9 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 options.SuppressModelStateInvalidFilter = true
 );
 
-builder.Services.AddControllers().AddApplicationPart(typeof(CompanyEmployeePresentation.
+builder.Services.AddControllers(config=>
+ config.InputFormatters.Insert(0,GetJsonPatchInputFormatter())
+).AddApplicationPart(typeof(CompanyEmployeePresentation.
     AssemplyReference).Assembly);
 builder.Services.ConfiguerCors();
 builder.Services.ConfigurIISIntegration();
@@ -21,6 +27,11 @@ builder.Services.ConfigureServiceManger();
 builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program));
 
+
+NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() =>
+new ServiceCollection().AddLogging().AddMvc().AddNewtonsoftJson()
+.Services.BuildServiceProvider().GetRequiredService<IOptions<MvcOptions>>().Value.InputFormatters
+.OfType<NewtonsoftJsonPatchInputFormatter>().First();
 
 
 

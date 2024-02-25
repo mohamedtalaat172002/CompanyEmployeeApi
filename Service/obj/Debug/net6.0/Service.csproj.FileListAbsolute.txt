@@ -22,3 +22,4 @@ C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Service\obj\Debug\net6.
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Service\obj\Debug\net6.0\ref\Service.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Service\bin\Debug\net6.0\Shared.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Service\bin\Debug\net6.0\Shared.pdb
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Service\obj\Debug\net6.0\Service.sourcelink.json

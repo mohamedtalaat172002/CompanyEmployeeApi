@@ -5,8 +5,8 @@ C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\Entities.sourcelink.json
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\Entities.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\refint\Entities.dll
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\Entities.pdb
 C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\ref\Entities.dll
-C:\Users\Hardware Store\Desktop\projects\CompanyEmployee\Entities\obj\Debug\net6.0\Entities.sourcelink.json

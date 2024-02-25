@@ -145,6 +145,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\Hardware Store\\Desktop\\projects\\CompanyEmployee\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Hardware Store\\Desktop\\projects\\CompanyEmployee\\Entities\\Entities.csproj"
+              },
               "C:\\Users\\Hardware Store\\Desktop\\projects\\CompanyEmployee\\Shared\\Shared.csproj": {
                 "projectPath": "C:\\Users\\Hardware Store\\Desktop\\projects\\CompanyEmployee\\Shared\\Shared.csproj"
               }
@@ -271,7 +274,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Hardware Store\\Desktop\\projects\\CompanyEmployee\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Hardware Store\\Desktop\\projects\\CompanyEmployee\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -25,45 +25,44 @@ namespace Service
             this._mapper = mapper;
         }
 
-        public CompanyDto CreateCompany(CompanyCreationDto company)
+        public async Task<CompanyDto> CreateCompanyAsync(CompanyCreationDto company)
         {
             var companyDb= _mapper.Map<Company>(company);
             repositoryManger.CompanyRepository.CreateCompany(companyDb);
-            repositoryManger.save();
+            await repositoryManger.saveAsync();
             var companyTOreturn = _mapper.Map<CompanyDto>(companyDb);
             return companyTOreturn; 
         }
 
-        public (IEnumerable<CompanyDto> companies, string ids) CreateCompanyCollection(IEnumerable<CompanyCreationDto> companiesDto)
+        public async Task<(IEnumerable<CompanyDto> companies, string ids)> CreateCompanyCollectionAsync(IEnumerable<CompanyCreationDto> companiesDto)
         {
             if (companiesDto is null)
                 throw new CompanyCollectionBadRequest();
             var companiesDb =_mapper.Map<IEnumerable<Company>>(companiesDto);  
             foreach (var company in companiesDb)
             {
-                repositoryManger.CompanyRepository.CreateCompany(company);
-               
+               repositoryManger.CompanyRepository.CreateCompany(company);    
             }
-            repositoryManger.save();
+            await repositoryManger.saveAsync();
             var CompaniescollectionToReturn = _mapper.Map<IEnumerable<CompanyDto>>(companiesDb);
             var Ids= string.Join(",", CompaniescollectionToReturn.Select(x=>x.Id));
             return(companies:CompaniescollectionToReturn, ids:Ids);
         }
 
-        public void DeleteCompany(Guid CompanyId, bool trackChanges)
+        public async Task DeleteCompanyasync(Guid CompanyId, bool trackChanges)
         {
-            var Company = repositoryManger.CompanyRepository.GetCompany(CompanyId, trackChanges);
+            var Company = await repositoryManger.CompanyRepository.GetCompanyAsync(CompanyId, trackChanges);
             if (Company is null)
                 throw new CompanyNotFoundException(CompanyId);
             repositoryManger.CompanyRepository.DeleteCompnay(Company);
-            repositoryManger.save();
+            await repositoryManger.saveAsync();
         }
 
-        public IEnumerable<CompanyDto> GetAllByIdS(IEnumerable<Guid> Ids, bool TrackChaneges)
+        public async Task<IEnumerable<CompanyDto>> GetCompaniesByIdsAsync(IEnumerable<Guid> Ids, bool TrackChaneges)
         {
             if (Ids is null)
                 throw new IdParametersBadRequestException();
-            var Companies = repositoryManger.CompanyRepository.GetByIds(Ids, TrackChaneges);
+            var Companies = await repositoryManger.CompanyRepository.GetByIdsAsync(Ids, TrackChaneges);
             if (Ids.Count() != Companies.Count())
                 throw new CollectionByIdsBadRequestException();
             var CompaniesDto= _mapper.Map<IEnumerable<CompanyDto>>(Companies);
@@ -71,17 +70,17 @@ namespace Service
            
         }
 
-        public IEnumerable<CompanyDto> GetCompanies(bool Trackchanges)
+        public async Task<IEnumerable<CompanyDto>> GetAllCompaniesAsync(bool Trackchanges)
         {
             
-                var Companies = repositoryManger.CompanyRepository.GetCompanies(Trackchanges);
+                var Companies = await repositoryManger.CompanyRepository.GetAllCompaniesAsync(Trackchanges);
                 var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(Companies);
                 return companiesDto;           
         }
 
-        public CompanyDto GetCompany(Guid Companyid, bool TrackChanges)
+        public async Task<CompanyDto> GetCompanyAsync(Guid Companyid, bool TrackChanges)
         {
-            var company = repositoryManger.CompanyRepository.GetCompany(Companyid,TrackChanges);
+            var company =await repositoryManger.CompanyRepository.GetCompanyAsync(Companyid,TrackChanges);
             if(company == null)
             {
                 throw new CompanyNotFoundException(Companyid);
@@ -90,13 +89,13 @@ namespace Service
             return CompanyDto;
         }
 
-        public void UpdateCompany(Guid CompanyId, CompanyForUpdateDto companyUpdateDto, bool TrackChanges)
+        public async Task UpdateCompanyAsync(Guid CompanyId, CompanyForUpdateDto companyUpdateDto, bool TrackChanges)
         {
-            var Company = repositoryManger.CompanyRepository.GetCompany(CompanyId, TrackChanges);
+            var Company = await repositoryManger.CompanyRepository.GetCompanyAsync(CompanyId, TrackChanges);
             if (Company is null)
                 throw new CompanyNotFoundException(CompanyId);
             _mapper.Map(companyUpdateDto,Company);
-            repositoryManger.save();
+           await repositoryManger.saveAsync();
         }
     }
 }
