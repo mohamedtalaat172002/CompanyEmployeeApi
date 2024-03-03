@@ -19,7 +19,7 @@ namespace Repository
 
         public async Task<IEnumerable<Company>> GetAllCompaniesAsync(bool trackChanges) =>
         await FindAll(trackChanges).OrderBy(c => c.Name).ToListAsync();
-
+    
         public async Task<Company> GetCompanyAsync(Guid companyId, bool trackChanges) =>
         await FindByCondition(c => c.Id.Equals(companyId), trackChanges).SingleOrDefaultAsync();
 

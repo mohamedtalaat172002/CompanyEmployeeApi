@@ -6,6 +6,7 @@ using ServiceContracts;
 using Shared.DataTranfere;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,16 @@ namespace Service
             this.repositoryManger = repositoryManger;
             this.loggerManager = loggerManager;
             this._mapper = mapper;
+        }
+
+        public async Task<Company>GetAndCheckIfCompanyExisits(Guid id,bool TrackChanges)
+        {
+            var company = await repositoryManger.CompanyRepository.GetCompanyAsync(id, TrackChanges);
+            if (company == null)
+            {
+                throw new CompanyNotFoundException(id);
+            }
+            return company;
         }
 
         public async Task<CompanyDto> CreateCompanyAsync(CompanyCreationDto company)
@@ -51,9 +62,7 @@ namespace Service
 
         public async Task DeleteCompanyasync(Guid CompanyId, bool trackChanges)
         {
-            var Company = await repositoryManger.CompanyRepository.GetCompanyAsync(CompanyId, trackChanges);
-            if (Company is null)
-                throw new CompanyNotFoundException(CompanyId);
+            var Company = await GetAndCheckIfCompanyExisits(CompanyId, trackChanges);
             repositoryManger.CompanyRepository.DeleteCompnay(Company);
             await repositoryManger.saveAsync();
         }
@@ -80,20 +89,14 @@ namespace Service
 
         public async Task<CompanyDto> GetCompanyAsync(Guid Companyid, bool TrackChanges)
         {
-            var company =await repositoryManger.CompanyRepository.GetCompanyAsync(Companyid,TrackChanges);
-            if(company == null)
-            {
-                throw new CompanyNotFoundException(Companyid);
-            }
+            var company = await GetAndCheckIfCompanyExisits(Companyid,TrackChanges);
             var CompanyDto = _mapper.Map<CompanyDto>(company);
             return CompanyDto;
         }
 
         public async Task UpdateCompanyAsync(Guid CompanyId, CompanyForUpdateDto companyUpdateDto, bool TrackChanges)
         {
-            var Company = await repositoryManger.CompanyRepository.GetCompanyAsync(CompanyId, TrackChanges);
-            if (Company is null)
-                throw new CompanyNotFoundException(CompanyId);
+            var Company = await GetAndCheckIfCompanyExisits(CompanyId, TrackChanges);
             _mapper.Map(companyUpdateDto,Company);
            await repositoryManger.saveAsync();
         }

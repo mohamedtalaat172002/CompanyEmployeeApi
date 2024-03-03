@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using NLog;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Options;
+using CompanyEmployeePresentation.ActionFilters;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,7 @@ builder.Services.AddControllers(config=>
  config.InputFormatters.Insert(0,GetJsonPatchInputFormatter())
 ).AddApplicationPart(typeof(CompanyEmployeePresentation.
     AssemplyReference).Assembly);
+builder.Services.AddScoped<ValidationActionFilter>();
 builder.Services.ConfiguerCors();
 builder.Services.ConfigurIISIntegration();
 builder.Services.ConfigureLoggerService();
